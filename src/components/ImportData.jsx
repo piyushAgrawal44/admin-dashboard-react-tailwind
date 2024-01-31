@@ -18,7 +18,7 @@ export default function ImportData() {
     try {
       setLoading(true);
 
-      const response = await fetch('http://localhost:8000/new/article', {
+      const response = await fetch(process.env.REACT_APP_BACKEND_URL +'/new/article', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
